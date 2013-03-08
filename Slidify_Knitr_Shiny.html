@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Use Slidify/knitr/shiny</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Use Slidify/knitr/shiny">
+  <meta name="author" content="John Muschelli">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+    <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+    <!-- END LOGO SLIDE -->
+    
+
+    <!-- TITLE SLIDE -->
+    <!-- Should I move this to a Local Layout File? -->
+    <slide class="title-slide segue nobackground">
+      <hgroup class="auto-fadein">
+        <h1>Use Slidify/knitr/shiny</h1>
+        <h2>Get with the times Prasad!</h2>
+        <p>John Muschelli<br/></p>
+      </hgroup>
+          </slide>
+
+    <!-- SLIDES -->
+      <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why use RStudio, I like my stuff!</h2>
+  </hgroup>
+  <article>
+    <p><a href="http://www.rstudio.com/ide/download/">http://www.rstudio.com/ide/download/</a></p>
+
+<ul>
+<li>It&#39;s good, has a more polished IDE</li>
+<li>Works well while knitting (sans yarn)</li>
+<li>Highlighting/<span class="black"><b>autocomplete</b></span> in the editor</li>
+<li>Can still use the R.app IDE when doing most things</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Why use knitr - I document!</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Takes little (no) steps </li>
+<li><code>install.packages(&quot;knitr&quot;)</code></li>
+<li>It&#39;s hip - you&#39;re young</li>
+<li>It&#39;s broader than LaTeX</li>
+<li>Has caching - run only parts of reports!
+
+<ul>
+<li>Sometimes stuff takes forever</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h1>Why Slidify, I love (Powerpoint/Beamer/Google Docs/Prezi)</h1>
+  </hgroup>
+  <article>
+    <ul>
+<li>Prezi is great when not going too crazy
+
+<ul>
+<li>Most times they make me dizzy</li>
+</ul></li>
+<li>Beamer is reproducible and still the standard for straight math</li>
+<li>Html has really cool things you can add on (but have to learn), but you can do it with the <code>mathjax</code> widget</li>
+</ul>
+
+<p>\[
+\beta_1 + \beta_2 = Slidify
+\]</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Why html?</h2>
+  </hgroup>
+  <article>
+    <p>You can also add really cool things (think apps):</p>
+
+<p><object data="knitted_webGL.html" width="800" height="600"> <embed src="knitted_webGL.html" width="800" height="600"> </embed> Error: Embedded data could not be displayed. </object></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Get Slidify</h2>
+  </hgroup>
+  <article>
+    <p>You can install Slidify, write a three page slide deck and publish it to Github, all in less than 5 minutes!</p>
+
+<table><thead>
+<tr>
+<th>Step</th>
+<th>Description</th>
+<th>Code</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>0</td>
+<td>Install</td>
+<td><code>require(devtools)</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>install_github(&quot;slidify&quot;, &quot;ramnathv&quot;)</code></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><code>install_github(&quot;slidifyLibraries&quot;, &quot;ramnathv&quot;)</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Load</td>
+<td><code>library(slidify)</code></td>
+</tr>
+<tr>
+<td>1</td>
+<td>Author</td>
+<td><code>author(&quot;mydeck&quot;)</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Edit</td>
+<td>Write in RMarkdown, separating slides with a blank line followed by three dashes <code>---</code>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Slidify</td>
+<td><code>slidify(&quot;index.Rmd&quot;)</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>Publish</td>
+<td><code>publish(user = &quot;USER&quot;, repo = &quot;REPO&quot;)</code></td>
+</tr>
+</tbody></table>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>But I want to shine!</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>First off- what is shiny</li>
+<li><code>install.packages(&quot;shiny&quot;)</code></li>
+<li>(Example)</li>
+<li>Make your <code>ui.R</code> and <code>server.R</code> and then run <code>runApp()</code> to start the server</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Pause</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>If your mind is not blown, you should be done your pizza
+
+<ul>
+<li>You can leave now - I have nothing cooler to offer you</li>
+<li>FYI - you&#39;re not really allowed to leave</li>
+<li>Just kidding</li>
+<li>Not really</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-8" style="background:;">
+  <hgroup>
+    <h2>Example I&#39;ve used for Shiny</h2>
+  </hgroup>
+  <article>
+    <ul>
+<li>Had large longitudinal data - wanted to window it interactively</li>
+<li>SVG is not supported in standard Shiny (think lattice plots) - look up shiny sandbox</li>
+<li>RGL is starting to work with it ( but still clunky )</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+      <slide class="" id="slide-9" style="background:;">
+  <hgroup>
+    
+  </hgroup>
+  <article>
+    
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+
+  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+<!-- Grab CDN jQuery, fall back to local if offline -->
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+<script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery-1.7.min.js"><\/script>')</script>
+<!-- Load Javascripts for Widgets -->
+<!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [['$','$'], ['\\(','\\)']],
+      processEscapes: true
+    }
+  });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script> -->
+<script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+</html>
